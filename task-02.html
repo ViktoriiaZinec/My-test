@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>JS</title>
+  </head>
+  <body>
+    <header>
+      <a class="btn-back" href="./js.html">Back</a>
+    </header>
+    <main class="description">
+        <h1>Завдання 2</h1>
+      <p>
+        Напишите функцию генератор chunkArray, которая возвращает итератор возвращающий части массива указанной длинны.
+      </p>
+      <p>
+        Пример: 
+        <ul>
+            <li>const iterator = chunkArray([1,2,3,4,5,6,7,8], 3);</li>
+            <li>iterator.next() // { value: [1,2,3], done: false }</li>
+            <li>iterator.next() // { value: [4,5,6], done: false }</li>
+            <li>iterator.next() // { value: [7,8], done: false }</li>
+            <li>iterator.next() // { value: undefined, done: true }</li>  
+         </ul>         
+      </p>
+    </main>
+    <script src="./js/chunkArray.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Grid CSS</title>
+    <style>
+      body {
+        color: #ffffff;
+        height: 100vh;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #3498db;
+        padding: 30px;
+      }
+
+      nav {
+        background-color: #2ecc71;
+        padding: 20px;
+      }
+
+      .sidebar {
+        background-color: #e74c3c;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        background-color: #f1c40f;
+        padding: 20px;
+        height: 100%;
+        height: calc(100vh - 97px - 68px - 58px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #34495e;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HEADER</h1>
+      <a class="btn-back" href="./html-css.html">Back</a>
+    </header>
+    <nav>
+      <h2>NAVIGATION</h2>
+    </nav>
+    <main class="container">
+      <div class="content">
+        <h3>CONTENT</h3>
+      </div>
+      <aside class="sidebar">
+        <h3>SIDEBAR</h3>
+      </aside>
+    </main>
+    <footer>
+      <p>FOOTER</p>
+    </footer>
+  </body>
+</html>

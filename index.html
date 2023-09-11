@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>GIT</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigate">
+        <ul class="nav-list">
+          <li class="menu-item">
+            <a class="menu-link current" href="./index.html">GIT</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="./html-css.html">CSS, HTML</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="./js.html">JS логіка</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="description">
+      <h1>ЗАВДАННЯ 1</h1>
+      <h2>
+        Як відправити код в пустий непов'язаний репозиторій
+        git@example.com:example/test.GIT
+      </h2>
+      <ol>
+        <li>
+          В терміналі знаходжу свій каталог і прописую команду git init, яка
+          створює каталог .git і наповнює його файлами, що формують структуру
+          git репозиторію (не видно в vs code, з терміналу ввести ls -a (--all))
+        </li>
+        <li>Комічу свої файли: git add . , git commit</li>
+        <li>
+          Додаю посилання на віддалений репозиторій git remote add origin
+          git@example.com:example/test.GIT (SSH репозиторія)
+        </li>
+        <li>
+          Відправляю свій коміт до віддаленого репозиторію -git push origin
+          HEAD:master
+        </li>
+      </ol>
+    </main>
+  </body>
+</html>

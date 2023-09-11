@@ -1,0 +1,149 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --primary-text-color: #2e2f42;
+  --title-text-color: #434455;
+  --white-text-color: #ffffff;
+  --accent-color: #4d5ae5;
+  --primary-bg-color: #ffffff;
+  --btn-color: #31d0aa;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+}
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-bg-color);
+  color: var(--title-text-color);
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+}
+.navigate {
+  background-color: #fff;
+  box-shadow: 0 5px 20px -10px #000;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 30px;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 120px;
+}
+
+a.menu-link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+a.current {
+  color: var(--accent-color);
+}
+.description {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 2;
+}
+.subnav-link {
+  color: var(--primary-text-color);
+}
+.subnav-link:hover,
+.subnav-link:focus {
+  color: var(--accent-color);
+}
+
+.btn-back {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background-color: var(--btn-color);
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.25s;
+  transition: transform 0.3s ease;
+}
+
+.btn-back:hover,
+.btn-back:focus {
+  transform: scale(0.99) translateY(1px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.content-square {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  animation-name: rotating-square;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-iteration-count: infinite;
+}
+@keyframes rotating-square {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: red;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+    background-color: orange;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    background-color: green;
+  }
+}

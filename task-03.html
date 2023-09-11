@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>JS</title>
+  </head>
+  <body>
+    <header>
+      <a class="btn-back" href="./js.html">Back</a>
+    </header>
+    <main class="description">
+      <h1>Завдання 3</h1>
+      <p>
+        Напишите функцию обертку, которая на вход принимает массив функций и их
+        параметров, а возвращает массив результатов их выполнения. Количество
+        аргументов исполняемой функции не ограничено!
+      </p>
+      <p>Пример:</p>
+
+      <p>const f1 = (cb) => {cb(1)}</p>
+      <p>const f2 = (a, cb) => {cb(a)}</p>
+      <p>const f3 = (a, b, cb) => {setTimeout(() => cb([a, b]), 1000)}</p>
+      <p>
+        bulkRun(<br />
+        &nbsp &nbsp [ <br />
+        &nbsp &nbsp &nbsp &nbsp [f1, [&nbsp]],<br />
+        &nbsp &nbsp &nbsp &nbsp [f2, [2]],<br />
+        &nbsp &nbsp &nbsp &nbsp [f3, [3, 4]]<br />
+        &nbsp &nbsp ] <br />
+        ).then(console.log)<br />
+        // Output: [1, 2, [3, 4]]
+      </p>
+    </main>
+    <script src="./js/bulkRun.js" type="module"></script>
+  </body>
+</html>

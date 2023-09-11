@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>JS</title>
+  </head>
+  <body>
+    <header>
+      <a class="btn-back" href="./js.html">Back</a>
+    </header>
+    <main class="description">
+      <h1>Завдання 6</h1>
+      <p>
+        Есть функция primitiveMultiply, которая умножает числа, но случайным
+        образом может выбрасывать исключения типа: NotificationException,
+        ErrorException. Задача написать функцию обертку которая будет повторять
+        вычисление при исключении NotificationException, но прекращать работу
+        при исключениях ErrorException
+      </p>
+      <p>Пример:</p>
+      <p>function NotificationException() {}</p>
+      <p>function ErrorException() {}</p>
+      <p>
+        function primitiveMultiply(a, b) {<br />
+        const rand = Math.random();<br />
+        if (rand < 0.5) {<br />
+        return a * b;<br />
+        } else if(rand > 0.85) {<br />
+        throw new ErrorException()<br />
+        } else {<br />
+        throw new NotificationException()<br />
+        }<br />
+        }<br />
+      </p>
+      <p>function reliableMultiply(a, b) { // Ваш код }</p>
+      <p>console.log(reliableMultiply(8, 8));</p>
+    </main>
+    <script src="./js/reliableMultiply.js" type="module"></script>
+  </body>
+</html>

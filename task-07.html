@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>JS</title>
+  </head>
+  <body>
+    <header>
+      <a class="btn-back" href="./js.html">Back</a>
+    </header>
+    <main class="description">
+      <h1>Завдання 7</h1>
+      <p>
+        Напишите функцию, которая берет объект любой вложенности и преобразует
+        ее в единую плоскую карту с разными уровнями, разделенными косой чертой
+        ( '/').
+      </p>
+      <p>Пример:</p>
+      <p>
+        const obj = {<br />
+        &nbsp &nbspa: {<br />
+        &nbsp &nbsp&nbsp &nbspb: {<br />
+        &nbsp &nbsp&nbsp &nbsp&nbsp &nbspc: 12,<br />
+        &nbsp &nbsp&nbsp &nbsp&nbsp &nbspd: 'Hello World'<br />
+        &nbsp &nbsp&nbsp &nbsp},<br />
+        &nbsp &nbsp&nbsp &nbspe: [1,2,3]<br />
+        &nbsp &nbsp}<br />
+        };<br />
+      </p>
+      <p>mapObject(demoData);</p>
+      <p>
+        // Outputs: {<br />
+        &nbsp &nbsp'a/b/c': 12,<br />
+        &nbsp &nbsp'a/b/d': 'Hello World',<br />
+        &nbsp &nbsp'a/e': [1,2,3]<br />
+        };<br />
+      </p>
+    </main>
+    <script src="./js/mapObject.js" type="module"></script>
+  </body>
+</html>
