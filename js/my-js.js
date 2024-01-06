@@ -10,6 +10,7 @@ class User {
   }
 
   // Метод changeEmail
+  
   changeEmail(newEmail) {
     this.email = newEmail;
   }
