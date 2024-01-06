@@ -13,12 +13,16 @@ function mapField(object, prefix = "") {
 
   for (let key in object) {
     const value = object[key];
+    console.log("key", key);
     let fullKey = prefix + key;
+    console.log("fullKey", fullKey);
 
     if (value instanceof Object && !(value instanceof Array)) {
       Object.assign(result, mapField(value, fullKey + "/"));
-      //   const r = mapField(value, fullKey + "/");
-      //   result = { ...result, ...r };
+      const r = mapField(value, fullKey + "/");
+      console.log("r", r);
+      result = { ...result, ...r };
+      console.log("result", result);
     } else {
       result["'" + fullKey + "'"] = value;
     }
