@@ -9,6 +9,7 @@ class User {
     return this.email;
   }
 
+  // Метод changeEmail
   changeEmail(newEmail) {
     this.email = newEmail;
   }
